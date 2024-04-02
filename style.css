@@ -10,3 +10,10 @@ html, body {
 .text {
     text-align: center;
 }
+
+#map { 
+    height: 512px; 
+    width: 512px;
+    margin: auto;
+    border-radius: 10px;
+}
