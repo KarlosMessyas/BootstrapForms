@@ -47,9 +47,19 @@ window.addEventListener('load', () => {
 
     const buttonGo = document.querySelector('#buttonGo');
     buttonGo.addEventListener("click", () => {
+        const InputName = document.querySelector('#floatingInputName');
+        const name = InputName.value;
+        const InputEmail = document.querySelector('#floatingInputEmail');
+        const email = InputEmail.value;
         const inputLocate = document.querySelector('#floatingInputLocate');
         const locate = inputLocate.value;
         const [latitude, longitude] = locate.split(',');
+        const fakeObject = {
+            nome: name,
+            email: email,
+            localizacao: 'Type="Point", coordinates: ' + latitude + longitude
+        }
+        console.log(fakeObject);
         console.log("Latitude:", latitude);
         console.log("Longitude:", longitude);
 
